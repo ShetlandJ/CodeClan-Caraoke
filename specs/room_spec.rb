@@ -73,4 +73,11 @@ class TestRoom < MiniTest::Test
     assert_equal(["James: Woooo...!"], @room1.woooo(guest, song))
   end
 
+  def test_woooo__multi()
+    guest = @room1.add_guest_to_room(@guest1)
+    song = @room1.add_song_to_playlist(@song1)
+
+    assert_equal(["James: Woooo...!"], @room1.woooo(guest, song))
+  end
+
 end
